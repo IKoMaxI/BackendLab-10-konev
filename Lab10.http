@@ -1,0 +1,35 @@
+@Lab10_HostAddress = http://localhost:5106
+
+GET {{Lab10_HostAddress}}/api/Students
+Accept: application/json
+
+###
+
+POST {{Lab10_HostAddress}}/api/Students
+Content-Type: application/json
+
+{
+  "name": "Ivan",
+  "group": 10,
+  "specialization": "Backend"
+}
+
+###
+
+GET {{Lab10_HostAddress}}/api/Students/1
+Accept: application/json
+
+###
+
+PUT {{Lab10_HostAddress}}/api/Students/1
+Content-Type: application/json
+
+{
+  "name": "Ivan",
+  "group": 20,
+  "specialization": "Frontend"
+}
+
+###
+
+DELETE {{Lab10_HostAddress}}/api/Students/1
