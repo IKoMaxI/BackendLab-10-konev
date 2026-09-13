@@ -10,7 +10,7 @@ builder.Services.AddLogging(logging =>
     logging.ClearProviders();
     logging.AddSerilog(new LoggerConfiguration()
         .ReadFrom.Configuration(builder.Configuration)
-        .CreateLogger());
+        .CreateLogger(), dispose: true);
 });
 
 var app = builder.Build();
